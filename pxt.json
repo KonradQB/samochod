@@ -1,0 +1,24 @@
+{
+    "name": "samochod",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "motor": "github:dfrobot/pxt-motor#2cdf17586556c5a532782aa436c516ae50f5f316",
+        "servo": "*",
+        "ContinuousServo": "github:tinkertanker/pxt-continuous-servo#v0.0.6"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}

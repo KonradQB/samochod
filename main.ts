@@ -1,4 +1,3 @@
-let punkty = 0
 function kieszonka () {
     punkty += 10
 }
@@ -18,23 +17,23 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 input.onButtonPressed(Button.A, function () {
-    for (let indeks = 0; indeks <= 100; indeks++) {
-        ContinuousServo.spin_one_way_with_speed(AnalogPin.P2, indeks)
-        basic.pause(100)
-    }
+    ContinuousServo.spin_other_way(AnalogPin.P1)
 })
 function STOP () {
     motor.motorStopAll()
 }
 input.onButtonPressed(Button.AB, function () {
     ContinuousServo.turn_off_motor(DigitalPin.P2)
+    ContinuousServo.turn_off_motor(DigitalPin.P1)
 })
 function kieszonka2 () {
     punkty = 0
 }
 input.onButtonPressed(Button.B, function () {
-    motor.servo(motor.Servos.S8, 13)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P12, 85)
 })
+let punkty = 0
+servos.P1.setRange(0, 180)
 basic.forever(function () {
     radio.setGroup(1)
 })
